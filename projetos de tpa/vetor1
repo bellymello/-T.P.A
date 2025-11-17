@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Vetor1 {
+    public static void main(String[] args) {
+         Scanner ler = new Scanner(System.in);
+         int i, t;
+         int a[], b[];
+         a = new int[20];
+         b = new int[20];
+         t = 0;
+         
+         //laço para ler o vetor a e guardar em b
+         for (i = 0; i < 20; i++) {
+             System.out.println("Digite o " + i + " elemento do vetor");
+             a[i] = ler.nextInt();
+         }
+
+         //guardar numeros pares no comeco
+         for (i = 0; i < 20; i++) {
+             if (a[i] % 2 == 0) {
+                 b[t] = a[i];
+                 t++;
+             }
+         }
+
+         //guardar os numeros impares
+         for (i = 0; i < 20; i++) {
+             if (a[i] % 2 != 0) {
+                 b[t] = a[i];
+                 t++;
+             }
+         }
+
+         System.out.print("\nVetor b: ");
+         for (i = 0; i < 20; i++) {
+             System.out.print(b[i] + " ");
+         }
+
+         ler.close();
+    }
+}
